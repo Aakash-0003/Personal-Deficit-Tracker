@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { DEFAULT_WEEKLY } from '../constants';
 import { loadState, saveState, todayISO } from '../utils';
-import { cloudLoad, cloudSave } from '../lib/cloud';
+import { cloudLoad, cloudSave, cloudStatus as initialCloudStatus } from '../lib/cloud';
+import { supabase } from '../lib/supabase';
 
 export function useDeficitState() {
     const [state, setState] = useState(() => {
@@ -17,11 +18,12 @@ export function useDeficitState() {
         return loaded ? { ...base, ...loaded } : base;
     });
 
+    const [syncStatus, setSyncStatus] = useState(supabase ? 'syncing' : 'unconfigured');
+
     // On mount: pull from cloud and merge with whatever is in localStorage.
-    // entries/weights union — local wins on same-day conflicts (user may have
-    // just typed something before cloud responded).
     useEffect(() => {
         cloudLoad().then((cloudState) => {
+            setSyncStatus(initialCloudStatus);
             if (!cloudState) return;
             setState((s) => ({
                 ...s,
@@ -35,7 +37,7 @@ export function useDeficitState() {
     // Save to localStorage immediately; save to cloud on every change.
     useEffect(() => {
         saveState(state);
-        cloudSave(state);
+        cloudSave(state).then(() => setSyncStatus(initialCloudStatus));
     }, [state]);
 
     const logDeficit = (date, value) => {
@@ -125,6 +127,7 @@ export function useDeficitState() {
 
     return {
         state,
+        syncStatus,
         logDeficit,
         deleteEntry,
         logWeight,

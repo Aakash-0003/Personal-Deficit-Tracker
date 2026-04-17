@@ -1,7 +1,17 @@
-import { Flame, Bell, BellOff, Download, Upload } from 'lucide-react';
+import { Flame, Bell, BellOff, Download, Upload, Cloud, CloudOff, Loader } from 'lucide-react';
 import { ACCENT } from '../constants';
 
-export default function Header({ notifications, onToggleNotifications, onExport, onImport }) {
+const SYNC_CONFIG = {
+    ok:            { icon: Cloud,    color: '#22c55e', label: 'Synced'        },
+    syncing:       { icon: Loader,   color: '#f97316', label: 'Syncing…'      },
+    error:         { icon: CloudOff, color: '#ef4444', label: 'Sync error'    },
+    unconfigured:  { icon: CloudOff, color: '#ffffff26', label: 'Local only'  },
+};
+
+export default function Header({ notifications, onToggleNotifications, onExport, onImport, syncStatus }) {
+    const sync = SYNC_CONFIG[syncStatus] ?? SYNC_CONFIG.unconfigured;
+    const SyncIcon = sync.icon;
+
     return (
         <header className="flex items-center justify-between mb-8 sm:mb-12">
             <div className="flex items-center gap-3">
@@ -14,6 +24,15 @@ export default function Header({ notifications, onToggleNotifications, onExport,
                 </div>
             </div>
             <div className="flex items-center gap-2">
+                <div
+                    title={sync.label}
+                    className="flex items-center gap-1.5 px-2.5 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-mono uppercase tracking-wider"
+                    style={{ color: sync.color }}
+                >
+                    <SyncIcon className={`w-3.5 h-3.5 ${syncStatus === 'syncing' ? 'animate-spin' : ''}`} />
+                    <span className="hidden sm:inline">{sync.label}</span>
+                </div>
+
                 <input
                     type="file"
                     accept="application/json"

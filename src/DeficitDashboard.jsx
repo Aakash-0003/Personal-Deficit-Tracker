@@ -19,6 +19,7 @@ import HeatmapGrid from './components/HeatmapGrid';
 export default function DeficitDashboard() {
     const {
         state,
+        syncStatus,
         logDeficit,
         deleteEntry,
         logWeight,
@@ -46,6 +47,7 @@ export default function DeficitDashboard() {
                     onToggleNotifications={toggleNotifications}
                     onExport={exportData}
                     onImport={importData}
+                    syncStatus={syncStatus}
                 />
 
                 <QuoteCard />
