@@ -81,14 +81,16 @@ export function useDeficitMetrics(state) {
                 : null,
         }));
 
-        const heatmapWeeks = 16;
         const heatmapData = [];
         const todayD = new Date(todayISO());
-        const heatStart = new Date(todayD);
-        heatStart.setDate(heatStart.getDate() - (heatmapWeeks * 7 - 1));
+        // start from the Monday of the week containing startDate
+        const heatStart = new Date(state.startDate);
         const startDay = heatStart.getDay();
         const shiftToMon = startDay === 0 ? -6 : 1 - startDay;
         heatStart.setDate(heatStart.getDate() + shiftToMon);
+        // show enough weeks to include today, capped at 52
+        const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+        const heatmapWeeks = Math.min(52, Math.max(4, Math.ceil((todayD - heatStart) / msPerWeek) + 1));
         for (let w = 0; w < heatmapWeeks; w++) {
             const week = [];
             for (let day = 0; day < 7; day++) {

@@ -1,7 +1,7 @@
 import { Grid3x3 } from 'lucide-react';
 import { Card, CardHeader } from './ui';
 
-export default function HeatmapGrid({ heatmapData }) {
+export default function HeatmapGrid({ heatmapData, startDate }) {
     return (
         <section className="mb-8">
             <Card>
@@ -59,7 +59,7 @@ export default function HeatmapGrid({ heatmapData }) {
                     </div>
                 </div>
                 <div className="mt-5 flex items-center justify-between flex-wrap gap-3">
-                    <div className="text-[10px] uppercase tracking-wider text-white/40 font-mono">Last 16 weeks · hover for detail</div>
+                    <div className="text-[10px] uppercase tracking-wider text-white/40 font-mono">Since {startDate} · hover for detail</div>
                     <div className="flex items-center gap-2 text-[10px] font-mono text-white/50">
                         <span>Less</span>
                         <div className="flex gap-1">

@@ -8,7 +8,7 @@ export const ACCENT = '#f97316';
 export const GREEN = '#22c55e';
 export const RED = '#ef4444';
 
-const QUOTES = [
+export const QUOTES = [
     { text: "Discipline equals freedom.", author: "Jocko Willink" },
     { text: "The only way out is through.", author: "David Goggins" },
     { text: "Stay hard.", author: "David Goggins" },

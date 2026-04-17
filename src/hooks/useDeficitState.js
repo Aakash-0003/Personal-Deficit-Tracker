@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { DEFAULT_WEEKLY } from '../constants';
 import { loadState, saveState, todayISO } from '../utils';
+import { cloudLoad, cloudSave } from '../lib/cloud';
 
 export function useDeficitState() {
     const [state, setState] = useState(() => {
@@ -16,7 +17,26 @@ export function useDeficitState() {
         return loaded ? { ...base, ...loaded } : base;
     });
 
-    useEffect(() => { saveState(state); }, [state]);
+    // On mount: pull from cloud and merge with whatever is in localStorage.
+    // entries/weights union — local wins on same-day conflicts (user may have
+    // just typed something before cloud responded).
+    useEffect(() => {
+        cloudLoad().then((cloudState) => {
+            if (!cloudState) return;
+            setState((s) => ({
+                ...s,
+                ...cloudState,
+                entries: { ...cloudState.entries, ...s.entries },
+                weights: { ...(cloudState.weights || {}), ...(s.weights || {}) },
+            }));
+        });
+    }, []);
+
+    // Save to localStorage immediately; save to cloud on every change.
+    useEffect(() => {
+        saveState(state);
+        cloudSave(state);
+    }, [state]);
 
     const logDeficit = (date, value) => {
         setState((s) => ({ ...s, entries: { ...s.entries, [date]: value } }));

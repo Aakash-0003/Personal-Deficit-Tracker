@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { RefreshCw } from 'lucide-react';
 import { QUOTES, ACCENT } from '../constants';
 import { Card } from './ui';
 
 export default function QuoteCard() {
-    const [quote, setQuote] = useState(QUOTES[0]);
-
-    useEffect(() => {
+    const [index, setIndex] = useState(() => {
         const seed = new Date().getDate() + new Date().getMonth() * 31;
-        setQuote(QUOTES[seed % QUOTES.length]);
-    }, []);
+        return seed % QUOTES.length;
+    });
+
+    const next = () => setIndex((i) => (i + 1) % QUOTES.length);
+
+    const quote = QUOTES[index];
 
     return (
         <section className="mb-8">
@@ -18,8 +21,17 @@ export default function QuoteCard() {
                 <div className="relative">
                     <div className="flex items-center justify-between mb-3">
                         <div className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-mono">// Signal.Daily</div>
-                        <div className="text-[9px] uppercase tracking-[0.25em] text-white/40 font-mono hidden sm:block">
-                            {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                        <div className="flex items-center gap-3">
+                            <div className="text-[9px] uppercase tracking-[0.25em] text-white/40 font-mono hidden sm:block">
+                                {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                            </div>
+                            <button
+                                onClick={next}
+                                title="Next quote"
+                                className="p-1.5 rounded-md text-white/30 hover:text-white/80 hover:bg-white/10 transition-all active:scale-90"
+                            >
+                                <RefreshCw className="w-3.5 h-3.5" />
+                            </button>
                         </div>
                     </div>
                     <div className="text-xl sm:text-2xl md:text-3xl font-black leading-tight mb-3" style={{ letterSpacing: '-0.02em' }}>
