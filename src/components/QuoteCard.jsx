@@ -13,6 +13,12 @@ export default function QuoteCard() {
 
     const quote = QUOTES[index];
 
+    const len = quote.text.length;
+    const textSize =
+        len < 120 ? 'text-xl sm:text-2xl md:text-3xl leading-tight' :
+        len < 220 ? 'text-lg sm:text-xl md:text-2xl leading-snug' :
+                    'text-sm sm:text-base md:text-lg leading-relaxed';
+
     return (
         <section className="mb-8">
             <Card className="relative overflow-hidden">
@@ -34,7 +40,7 @@ export default function QuoteCard() {
                             </button>
                         </div>
                     </div>
-                    <div className="text-xl sm:text-2xl md:text-3xl font-black leading-tight mb-3" style={{ letterSpacing: '-0.02em' }}>
+                    <div className={`${textSize} font-bold mb-3`} style={{ letterSpacing: '-0.01em' }}>
                         "{quote.text}"
                     </div>
                     <div className="text-xs sm:text-sm font-mono text-orange-400 uppercase tracking-[0.2em] font-bold">— {quote.author}</div>

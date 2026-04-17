@@ -9,104 +9,204 @@ export const GREEN = '#22c55e';
 export const RED = '#ef4444';
 
 export const QUOTES = [
-    { text: "Discipline equals freedom.", author: "Jocko Willink" },
-    { text: "The only way out is through.", author: "David Goggins" },
-    { text: "Stay hard.", author: "David Goggins" },
-    { text: "You are in danger of living a life so comfortable and soft that you will die without ever realizing your true potential.", author: "David Goggins" },
-    { text: "Self-discipline is the ultimate form of self-love.", author: "Alex Hormozi" },
-    { text: "The pain you feel today will be the strength you feel tomorrow.", author: "Arnold Schwarzenegger" },
-    { text: "Talent you have naturally. Skill is only developed by hours and hours of work.", author: "Usain Bolt" },
-    { text: "I've failed over and over and over again. And that is why I succeed.", author: "Michael Jordan" },
-    { text: "Some people want it to happen, some wish it would happen, others make it happen.", author: "Michael Jordan" },
-    { text: "Self-belief and hard work will always earn you success.", author: "Virat Kohli" },
-    { text: "Nothing comes easy. Work hard for it.", author: "Virat Kohli" },
-    { text: "You can't put a limit on anything. The more you dream, the further you get.", author: "Michael Phelps" },
-    { text: "If you want to be the best, you have to do things that other people aren't willing to do.", author: "Michael Phelps" },
-    { text: "The less you talk, the more you're listened to.", author: "Tom Brady" },
-    { text: "You have a right to perform your duty, but not to the fruits of action.", author: "Krishna, Bhagavad Gita" },
-    { text: "Perform your obligatory duty, because action is indeed better than inaction.", author: "Krishna, Bhagavad Gita" },
-    { text: "The mind is restless, but it can be controlled by practice and detachment.", author: "Krishna, Bhagavad Gita" },
-    { text: "A man is made by his beliefs. As he believes, so he is.", author: "Krishna, Bhagavad Gita" },
-    { text: "The successful warrior is the average man, with laser-like focus.", author: "Bruce Lee" },
-    { text: "Hard work beats talent when talent doesn't work hard.", author: "Tim Notke" },
-    { text: "Volume negates luck.", author: "Alex Hormozi" },
-    { text: "Boring consistency beats exciting inconsistency.", author: "Alex Hormozi" },
-    { text: "Don't stop when you're tired. Stop when you're done.", author: "David Goggins" },
-    { text: "You must build callouses on your mind just like you build them on your hands.", author: "David Goggins" },
-    { text: "The most important conversation you’ll ever have is the one you have with yourself.", author: "David Goggins" },
-    { text: "When you think that you are done, you're only 40% into what your body's capable of doing.", author: "David Goggins" },
-    { text: "Go get after it.", author: "Jocko Willink" },
-    { text: "Extreme ownership. Leaders must own everything in their world. There is no one else to blame.", author: "Jocko Willink" },
-    { text: "Don't count on motivation. Count on discipline.", author: "Jocko Willink" },
-    { text: "If you want to be tougher, be tougher.", author: "Jocko Willink" },
-    { text: "You don't need more time. You need more focus.", author: "Alex Hormozi" },
-    { text: "The person who can sit in a room for 10 years and do the boring thing wins.", author: "Alex Hormozi" },
-    { text: "You don't become confident by shouting affirmations. You become confident by a stack of undeniable proof.", author: "Alex Hormozi" },
-    { text: "Work like there is someone working 24 hours a day to take it away from you.", author: "Mark Cuban" },
-    { text: "I don't play for 90 minutes. I play until I win.", author: "Cristiano Ronaldo" },
-    { text: "Your love makes me strong. Your hate makes me unstoppable.", author: "Cristiano Ronaldo" },
-    { text: "Dedication, hard work all the time, and belief.", author: "Cristiano Ronaldo" },
-    { text: "I'm not a perfectionist, but I like to feel that things are done well.", author: "Cristiano Ronaldo" },
-    { text: "Maybe they hate me because I'm too good.", author: "Cristiano Ronaldo" },
-    { text: "Everything negative—pressure, challenges—is all an opportunity for me to rise.", author: "Kobe Bryant" },
-    { text: "Rest at the end, not in the middle.", author: "Kobe Bryant" },
-    { text: "Mamba mentality is all about focusing on the process and trusting in the hard work.", author: "Kobe Bryant" },
-    { text: "If you're afraid to fail, then you're probably going to fail.", author: "Kobe Bryant" },
-    { text: "Obsession is natural.", author: "Kobe Bryant" },
-    { text: "I can accept failure, everyone fails at something. But I can't accept not trying.", author: "Michael Jordan" },
-    { text: "To be successful you have to be selfish, or else you never achieve.", author: "Michael Jordan" },
-    { text: "Limits, like fears, are often just an illusion.", author: "Michael Jordan" },
-    { text: "Step by step. I can't see any other way of accomplishing anything.", author: "Michael Jordan" },
-    { text: "I want to be the best of all time.", author: "Virat Kohli" },
-    { text: "On the field, you are a warrior. You have to give your 100%.", author: "Virat Kohli" },
-    { text: "Whatever you want to do, do with full passion and work really hard towards it.", author: "Virat Kohli" },
-    { text: "There are no shortcuts to success.", author: "Virat Kohli" },
-    { text: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.'", author: "Muhammad Ali" },
-    { text: "He who is not courageous enough to take risks will accomplish nothing in life.", author: "Muhammad Ali" },
-    { text: "It's lack of faith that makes people afraid of meeting challenges, and I believed in myself.", author: "Muhammad Ali" },
-    { text: "If my mind can conceive it, and my heart can believe it—then I can achieve it.", author: "Muhammad Ali" },
-    { text: "There is no such thing as 'natural' talent. There is only hard work.", author: "Michael Phelps" },
-    { text: "I want to look back and say I did everything I could.", author: "Michael Phelps" },
-    { text: "I won't predict anything historic. But I will predict that I'm going to do my best.", author: "Michael Phelps" },
-    { text: "Consistency is what makes the average into the elite.", author: "Tom Brady" },
-    { text: "I didn't come this far to only come this far.", author: "Tom Brady" },
-    { text: "If you don't believe in yourself, why is anyone else going to believe in you?", author: "Tom Brady" },
-    { text: "Too many people say 'no' to themselves before they even try.", author: "Joe Rogan" },
-    { text: "Be the hero of your own movie.", author: "Joe Rogan" },
-    { text: "Excellence is being able to perform at a high level over and over again.", author: "Joe Rogan" },
-    { text: "One of the most fascinating things about humans is the capacity to self-correct.", author: "Joe Rogan" },
-    { text: "Someone is sitting in the shade today because someone planted a tree a long time ago.", author: "Warren Buffett" },
-    { text: "The man who says he can and the man who says he can't are both usually right.", author: "Henry Ford" },
-    { text: "Better to live your own destiny imperfectly than to live an imitation of somebody else's life with perfection.", author: "Krishna, Bhagavad Gita" },
-    { text: "The soul is neither born, and nor does it die.", author: "Krishna, Bhagavad Gita" },
-    { text: "Focus on your work, not the results.", author: "Krishna, Bhagavad Gita" },
-    { text: "Calmness, gentleness, silence, self-restraint, and purity: these are the disciplines of the mind.", author: "Krishna, Bhagavad Gita" },
-    { text: "To the mind that is still, the whole universe surrenders.", author: "Lao Tzu" },
-    { text: "You are what you do, not what you say you'll do.", author: "Carl Jung" },
-    { text: "Other people's opinion of you does not have to become your reality.", author: "Les Brown" },
-    { text: "Shoot for the moon. Even if you miss, you'll land among the stars.", author: "Les Brown" },
-    { text: "It’s not over until I win.", author: "Les Brown" },
-    { text: "You must be willing to do the things today others won't do, in order to have the things tomorrow others won't have.", author: "Les Brown" },
-    { text: "If you do what is easy, your life will be hard. If you do what is hard, your life will be easy.", author: "Les Brown" },
-    { text: "The greatness of a man is not in how much wealth he acquires, but in his integrity.", author: "Bob Marley" },
-    { text: "Fall seven times, stand up eight.", author: "Japanese Proverb" },
-    { text: "He who has a why to live can bear almost any how.", author: "Friedrich Nietzsche" },
-    { text: "The more you sweat in peace, the less you bleed in war.", author: "Navy SEAL Motto" },
-    { text: "Comfort is the enemy of progress.", author: "P.T. Barnum" },
-    { text: "Uncommon amongst uncommon.", author: "David Goggins" },
-    { text: "Don't let your ego get in the way of your progress.", author: "Jocko Willink" },
-    { text: "The only person you should try to be better than is the person you were yesterday.", author: "Matty Mullins" },
-    { text: "I don't stop when I'm tired. I stop when I'm done.", author: "David Goggins" },
-    { text: "Winning is not a sometime thing; it's an all the time thing.", author: "Vince Lombardi" },
-    { text: "Practice like you've never won. Play like you've never lost.", author: "Michael Jordan" },
-    { text: "Amateurs hope. Professionals work.", author: "Unknown" },
-    { text: "Show up. Every single day.", author: "Joe Rogan" },
-    { text: "Action is the foundational key to all success.", author: "Pablo Picasso" },
-    { text: "Strength does not come from winning. Your struggles develop your strengths.", author: "Arnold Schwarzenegger" },
-    { text: "Work in silence. Let your success be your noise.", author: "Frank Ocean" },
-    { text: "Small daily improvements are the key to staggering long-term results.", author: "Unknown" },
-    { text: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
-    { text: "Hard work is a prison sentence only if it does not have a meaning.", author: "Malcolm Gladwell" },
-    { text: "Pain is temporary. Quitting lasts forever.", author: "Lance Armstrong" },
-    { text: "Great things come from hard work and perseverance. No excuses.", author: "Kobe Bryant" }
+    // --- THE WARRIORS & ATHLETES (RAW POWER) ---
+    {
+        text: "I didn’t take a single day off for five years. Not one. Every day I was in the water. I was willing to do what others wouldn't do, so I could achieve what others couldn't achieve. If you want to be the best, there are no days off.",
+        author: "Michael Phelps"
+    },
+    {
+        text: "I remember looking in the mirror and saying, 'You cannot look like that if you want to be the best in the world.' I changed everything the next morning. My diet, my training, my sleep. If you want to lead, you have to be the hardest worker in the room. Period.",
+        author: "Virat Kohli"
+    },
+    {
+        text: "You are in danger of living a life so comfortable and soft that you will die without ever realizing your true potential. You have to build callouses on your brain. When your mind is telling you you're done, you're only at 40%.",
+        author: "David Goggins"
+    },
+    {
+        text: "Let me tell you something you already know. The world ain't all sunshine and rainbows. It’s a very mean and nasty place. It will beat you to your knees and keep you there permanently if you let it. But it ain't about how hard you hit. It's about how hard you can get hit and keep moving forward.",
+        author: "Rocky Balboa"
+    },
+    {
+        text: "People think I'm a disciplined person. I'm not. I'm a focused person. Discipline is just the mechanical requirement of focus. If you know what you want, the 'hard work' is just the cost of admission.",
+        author: "Alex Hormozi"
+    },
+    {
+        text: "There is no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings. You could be anyone if you put in the time. You will reach the top, and that is that. I am not talented, I am obsessed.",
+        author: "Conor McGregor"
+    },
+    {
+        text: "I am the best because I work the hardest. I don't care about the partying, I don't care about the distractions. I care about the gold. If you aren't training while I'm training, you've already lost.",
+        author: "Khabib Nurmagomedov"
+    },
+
+    // --- CINEMATIC & HINDI (SPIRIT & SOUL) ---
+    {
+        text: "Wahi kahani phir ek baar... Majnu ne khana chhoda, Laila ne baal noch liye. Kyun? Wohi purani kahani. Apni kahani khud likho. Tu wahi hai jo tu banna chahta hai. Do not follow the script, be the author.",
+        author: "Ved (Tamasha)"
+    },
+    {
+        text: "Log kehte hain Milkha Singh mar jayega... par Milkha Singh aise nahi marega. Race ke liye taiyaar ho? Yeh tumhari aakhri race ho sakti hai. 'Daudunga bhi waise hi.'",
+        author: "Milkha Singh (Bhaag Milkha Bhaag)"
+    },
+    {
+        text: "Main pal do pal ka shayar hoon... lekin ground pe main sadiyon ka khiladi hoon. Focus on the ball, not the crowd. Success is a byproduct of doing the small things right, every single day.",
+        author: "MS Dhoni (The Untold Story)"
+    },
+    {
+        text: "Banday ki zaat woh nahi jo dikhti hai, banday ki zaat woh hai jo woh banna chahta hai. It's not about the name on the back of the jersey, it's about the heart beating inside it.",
+        author: "Creed"
+    },
+    {
+        text: "Agar tune aaj mehnat nahi ki, toh kal tujhe pachtawa hoga. Aur pachtawa har roz ki maut hota hai. Choose the pain of discipline over the pain of regret.",
+        author: "Sultan"
+    },
+    {
+        text: "Sher banna hai toh jungle mein ladna seekho. Yeh shehar ki bheed mein toh kutte bhi bhonkte hain. A warrior is defined by the battles he fights when no one is watching.",
+        author: "Sports Cinema Wisdom"
+    },
+
+    // --- STOIC & SPIRITUAL (THE ANCHOR) ---
+    {
+        text: "Karmanye vadhikaraste ma phaleshu kadachana. You have a right to your actions, but never to the results. Perform your duty with total intensity, but remain detached from the outcome. That is the secret to peak performance.",
+        author: "Krishna (Bhagavad Gita)"
+    },
+    {
+        text: "The mind is its own place, and in itself can make a heaven of hell, a hell of heaven. If you control your thoughts during an ultra, you control the world. The body is just a slave to the mind.",
+        author: "Krishna / Stoic Thought"
+    },
+    {
+        text: "Think of yourself as dead. You have lived your life. Now, take what's left and live it properly. What stands in the way becomes the way. Every obstacle is fuel for your growth.",
+        author: "Marcus Aurelius"
+    },
+    {
+        text: "It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable. Your body is a temple; don't let it become a graveyard of unfulfilled potential.",
+        author: "Socrates"
+    },
+    {
+        text: "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control. Focus entirely on your effort, your breath, and your next step.",
+        author: "Epictetus"
+    },
+
+    // --- ENDURANCE & GRIT (THE DARK MATTER) ---
+    {
+        text: "In the middle of an ultra, when everything hurts and your mind is begging you to stop, that’s where the real race begins. Everything before that was just a warm-up. This is where you find out who you really are.",
+        author: "Endurance Philosophy"
+    },
+    {
+        text: "Pain is temporary. It may last a minute, or an hour, or a day, or a year, but eventually it will subside and something else will take its place. If I quit, however, it lasts forever.",
+        author: "Eric Thomas / Lance Armstrong"
+    },
+    {
+        text: "Don't stop when you're tired. Stop when you're done. Your legs aren't giving out; your head is giving up. Stay hard.",
+        author: "David Goggins"
+    },
+    {
+        text: "One more round. When your feet are like lead and you're gasping for air, you do one more round. That is what makes a champion. That is what separates the elite from the average.",
+        author: "Rocky Marciano"
+    },
+    {
+        text: "Success is the ability to go from one failure to another with no loss of enthusiasm. You keep showing up. You keep grinding. You keep coding. You keep running. Until the world has no choice but to give in.",
+        author: "Winston Churchill"
+    },
+    {
+        text: "Jo ladte hain wahi jeetate hain. Aur jo gir kar sambhalna jaante hain, unhe koi hara nahi sakta. The man who gets up after falling is stronger than the man who never fell.",
+        author: "Indian Army Proverb"
+    }, {
+        text: "Apni aag ko zinda rakh, yeh aag hi teri pehchaan hai. Duniya kahegi ki tu pagal hai, par yaad rakhna, itihaas pagal hi rachte hain. Jo thak gaya woh ruk gaya, jo ruka woh mar gaya. Chalte rehna hi zindagi hai.",
+        author: "Piyush Mishra"
+    },
+    {
+        text: "Woh jo kehte hain ki kismat mein nahi tha, unse kaho ki kismat likhi nahi jaati, kismat banayi jaati hai. Apne haathon ki lakeeron ko mat dekh, apne pashine ki boondon ko dekh. Wahi teri asli kismat hai.",
+        author: "Piyush Mishra"
+    },
+    {
+        text: "Duniya ke liye tum ek machine ho sakte ho, par apne liye tum ek tufaan ho. Jab tak tumhari saans chal rahi hai, tab tak tum hare nahi ho. Utho, lado, aur tab tak mat ruko jab tak manzil tumhare kadam na choome.",
+        author: "Piyush Mishra"
+    },
+    {
+        text: "Abhi toh dhoop hai, dhalne do... abhi toh paron mein jaan baaki hai. Yeh jo thakaan hai, yeh toh mehaz ek ehsaas hai. Asli taqat toh tumhari rooh mein chupi hai.",
+        author: "Piyush Mishra"
+    },
+
+    // --- TAMASHA (Ved's Awakening) ---
+    {
+        text: "Kyun darta hai? Kya ho jayega? Zyada se zyada haar jayega na? Par us haar mein bhi ek kahani hogi. Woh purani ghisi-piti kahani mat dohraya kar. Tu wahi hai jo tu banna chahta hai. Apni film ka hero khud ban, kisi aur ka sidekick nahi.",
+        author: "Ved (Tamasha)"
+    },
+    {
+        text: "Ek hi toh zindagi hai... wahi routine, wahi kaam, wahi boring log. Kya yahi hai tera asli rang? Tu toh tufaan tha, tu toh khula aasmaan tha. Yeh pinjre mein rehne ki aadat kyun daal li tune? Todd de yeh zanjeerein.",
+        author: "Ved (Tamasha)"
+    },
+    {
+        text: "Ending badal de Ved, ending badal de. Agar kahani achhi nahi lag rahi, toh usse wahi mat khatam kar jahan sab karte hain. Ek naya mod la, ek naya rasta dhund. Kyunki teri kahani sirf teri hai.",
+        author: "Ved (Tamasha)"
+    },
+
+    // --- ALEX HORMOZI (The Logic of Volume & Pain) ---
+    {
+        text: "You don't need more 'motivation.' You need to do 10x more volume than you think is reasonable. If you think 100 cold calls is a lot, do 1,000. If you think 10 miles is long, run 50. Volume negates luck. Eventually, the universe has no choice but to give you what you want because you outworked everyone else.",
+        author: "Alex Hormozi"
+    },
+    {
+        text: "The reason you aren't successful yet is because you are still worried about what people who aren't successful think of you. You are playing a game with people who aren't even on the field. Ignore the noise. Focus on the work. The scoreboard doesn't lie.",
+        author: "Alex Hormozi"
+    },
+    {
+        text: "A focused fool can beat a distracted genius every time. Most people are talented but distracted. If you can just stay in the room and do the boring, monotonous work for longer than anyone else, you win by default. Longevity is the ultimate competitive advantage.",
+        author: "Alex Hormozi"
+    },
+    {
+        text: "You should be terrified of living a mediocre life. You should be scared to death of being average. That fear should drive you to work when you’re tired, to run when it’s raining, and to code when your brain feels like mush.",
+        author: "Alex Hormozi"
+    },
+    {
+        text: "Kill your ego before it kills your future. Your ego wants you to feel safe and comfortable. Your soul wants you to grow. Growth only happens in the 'red zone'—the place where you feel like you can't go on.",
+        author: "Alex Hormozi"
+    },
+
+    // --- UFC & COMBAT GRIT (The Fight Mindset) ---
+    {
+        text: "I am not the most talented fighter, but I am the most prepared. When I step into that Octagon, I know I have done everything humanly possible to win. If you want to beat me, you're going to have to kill me, because I’m never going to quit.",
+        author: "George St-Pierre"
+    },
+    {
+        text: "My mindset is: I'm going to go out there and I'm going to take what's mine. I don't care who is standing in front of me. They are just an obstacle between me and my destiny. You have to be a predator, not the prey.",
+        author: "Israel Adesanya"
+    },
+    {
+        text: "First you have to believe. Then you have to work. Then you have to suffer. If you haven't suffered for your goals, you don't deserve them. Victory is only sweet because of the bitterness of the struggle.",
+        author: "Khabib Nurmagomedov"
+    },
+
+    // --- THE STOIC & WARRIOR CODE (The Foundation) ---
+    {
+        text: "How long are you going to wait before you demand the best for yourself? You are behaving like a spectator in your own life. Get on the field. Suffer the training, endure the heat, and become the person you were meant to be.",
+        author: "Epictetus / Stoic Principle"
+    },
+    {
+        text: "Imagine that you have already died. Now, take this 'bonus' time and live it like a warrior. Every breath you take is a gift. Don't waste it on being lazy. Don't waste it on being soft.",
+        author: "Marcus Aurelius"
+    },
+    {
+        text: "The man who is master of his senses and his mind, who is free from desire and anger, is a true yogi. He performs his work with intensity but remains calm in the face of failure. That is the ultimate power.",
+        author: "Krishna (Bhagavad Gita)"
+    },
+
+    // --- SPORTS CINEMA & PURE GRIT ---
+    {
+        text: "You have to prove them wrong. Not because they matter, but because you need to know that their 'impossible' is your 'starting line.' Every time you want to quit, remember why you started.",
+        author: "Creed (Movie)"
+    },
+    {
+        text: "Success is not given. It is earned. On the track, in the gym, in the office. With blood, sweat, and tears. Every single day. If you stop, you lose everything. So don't stop.",
+        author: "Bhaag Milkha Bhaag"
+    },
+    {
+        text: "I don't look at the distance remaining. I look at the next step. If I can take one more step, I can finish the race. And I can always take one more step. Always.",
+        author: "Ultra-Runner Proverb"
+    },
+    {
+        text: "They call it 'beast mode' for a reason. Because you have to tap into something primal. Something that doesn't care about comfort. Something that only knows how to move forward and conquer.",
+        author: "Training Mindset"
+    }
 ];
